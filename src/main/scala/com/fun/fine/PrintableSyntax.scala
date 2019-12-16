@@ -30,11 +30,15 @@ object Application {
 
   import PrintableInstances._
   import PrintableSyntax._
+  import cats.Show
+  import cats.instances.int._
+  import cats.instances.string._
+  import cats.syntax.show._
 
-  final case class Cat(name: String, age: Int, color: String)
+
+  implicit val catShow: Show[Cat] =
+    (cat:Cat) => s"${cat.name.show} is a ${cat.age.show} year-old ${cat.color.show} cat"
 
   implicit val catPrintable: Printable[Cat] =
     (cat: Cat) => s"${cat.name.format} is a ${Printable.format(cat.age)} year-old ${Printable.print(cat.color)} cat"
-
-
 }
