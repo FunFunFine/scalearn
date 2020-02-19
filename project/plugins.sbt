@@ -1,0 +1,6 @@
+addSbtPlugin("org.hammerlab"             % "sbt-dependency-graph"   % "0.10.2")
+addSbtPlugin("com.timushev.sbt"          % "sbt-updates"            % "0.5.0")
+addSbtPlugin("org.scoverage"             % "sbt-scoverage"          % "1.6.1")
+addSbtPlugin("org.scalameta"             % "sbt-scalafmt"           % "2.3.1")
+addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat"           % "0.1.10")
+addSbtPlugin("org.scalastyle"            %% "scalastyle-sbt-plugin" % "1.0.0")
