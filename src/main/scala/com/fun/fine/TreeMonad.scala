@@ -16,7 +16,6 @@ object TreeMonad {
     Leaf(value)
 
   import cats.Monad
-  import cats.syntax.monad._
 
   implicit val treeMonad : Monad[Tree] = new Monad[Tree] {
     override def pure[A](x: A): Tree[A] = leaf(x)

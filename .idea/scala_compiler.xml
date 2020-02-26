@@ -3,19 +3,53 @@
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="scalearn_6565" />
     <profile name="sbt 2" modules="scalearn">
+      <option name="implicitConversions" value="true" />
       <option name="higherKinds" value="true" />
+      <option name="existentials" value="true" />
+      <option name="macros" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <option name="featureWarnings" value="true" />
+      <option name="explainTypeErrors" value="true" />
       <parameters>
         <parameter value="-encoding" />
-        <parameter value="UTF-8" />
-        <parameter value="-Xlint" />
+        <parameter value="utf-8" />
+        <parameter value="-Xcheckinit" />
         <parameter value="-Xfatal-warnings" />
-        <parameter value="-Ypartial-unification" />
+        <parameter value="-Xlint:adapted-args" />
+        <parameter value="-Xlint:constant" />
+        <parameter value="-Xlint:delayedinit-select" />
+        <parameter value="-Xlint:deprecation" />
+        <parameter value="-Xlint:doc-detached" />
+        <parameter value="-Xlint:inaccessible" />
+        <parameter value="-Xlint:infer-any" />
+        <parameter value="-Xlint:missing-interpolator" />
+        <parameter value="-Xlint:nullary-override" />
+        <parameter value="-Xlint:nullary-unit" />
+        <parameter value="-Xlint:option-implicit" />
+        <parameter value="-Xlint:package-object-classes" />
+        <parameter value="-Xlint:poly-implicit-overload" />
+        <parameter value="-Xlint:private-shadow" />
+        <parameter value="-Xlint:stars-align" />
+        <parameter value="-Xlint:type-parameter-shadow" />
+        <parameter value="-Wdead-code" />
+        <parameter value="-Wextra-implicit" />
+        <parameter value="-Wnumeric-widen" />
+        <parameter value="-Wunused:implicits" />
+        <parameter value="-Wunused:imports" />
+        <parameter value="-Wunused:locals" />
+        <parameter value="-Wunused:params" />
+        <parameter value="-Wunused:patvars" />
+        <parameter value="-Wunused:privates" />
+        <parameter value="-Wvalue-discard" />
+        <parameter value="-Yrangepos" />
+        <parameter value="-Ywarn-unused" />
+        <parameter value="-encoding" />
+        <parameter value="utf8" />
       </parameters>
       <plugins>
-        <plugin path="C:\Users\a.voi\.ivy2\cache\org.spire-math\kind-projector_2.12\jars\kind-projector_2.12-0.9.3.jar" />
+        <plugin path="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/olegpy/better-monadic-for_2.13/0.3.1/better-monadic-for_2.13-0.3.1.jar" />
+        <plugin path="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/kind-projector_2.13/0.10.3/kind-projector_2.13-0.10.3.jar" />
       </plugins>
     </profile>
   </component>

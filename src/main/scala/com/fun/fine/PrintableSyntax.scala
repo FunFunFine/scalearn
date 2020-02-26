@@ -3,7 +3,7 @@ package com.fun.fine
 object PrintableSyntax {
 
   implicit class PrintableOps[A](value: A) {
-    def format(implicit pa: Printable[A]): Unit = println(value.format)
+    def format_(implicit pa: Printable[A]): Unit = println(value.format)
 
     def format(implicit pa: Printable[A]): String = pa.format(value)
 
@@ -28,8 +28,6 @@ object Printable {
 
 object Application {
 
-  import PrintableInstances._
-  import PrintableSyntax._
   import cats.Show
   import cats.instances.int._
   import cats.instances.string._
@@ -39,6 +37,4 @@ object Application {
   implicit val catShow: Show[Cat] =
     (cat:Cat) => s"${cat.name.show} is a ${cat.age.show} year-old ${cat.color.show} cat"
 
-  implicit val catPrintable: Printable[Cat] =
-    (cat: Cat) => s"${cat.name.format} is a ${Printable.format(cat.age)} year-old ${Printable.print(cat.color)} cat"
 }

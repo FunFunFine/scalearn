@@ -15,8 +15,6 @@ object ReaderHacking {
 
   def DbReader[A]: (Db => A) => Reader[Db, A] = Reader[Db, A]
 
-  def checkLogin(userId: Int,
-                 password: String): DbReader[Boolean] = findUsername(userId).map(user => user.map(checkPassword(_, password)).getOrElse(false.))
 
 
   case class Db(usernames: Map[Int, String],

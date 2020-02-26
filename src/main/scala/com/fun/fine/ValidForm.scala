@@ -1,6 +1,6 @@
 package com.fun.fine
 import cats.implicits._
-import cats.
+
 object ValidForm {
   type Strings = List[String]
   type ErrorsEither[A] = Either[Strings, A]
