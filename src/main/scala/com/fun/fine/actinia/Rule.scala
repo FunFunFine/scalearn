@@ -1,5 +1,8 @@
 package com.fun.fine.actinia
 
+import cats.Applicative
+import cats.implicits._
+
 
 trait Rule {
   type Data
@@ -9,6 +12,16 @@ trait Rule {
   def isFitClient(data: Data): Boolean
 
   def name: String
+  def applyRule[F[_]: Applicative](implicit payment: Payment, data: => F[Option[Data]]): F[Option[Rule]] = {
+    if (!isFitPayment(payment)) {
+      none[Rule].pure[F]
+    } else {
+      data.map {
+        case Some(value) if isFitClient(value) => this.some
+        case _ => none[Rule]
+      }
+    }
+  }
 }
 
 object ECRule extends Rule {
